@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+         
+    <ListView android:id="@android:id/list"
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:drawSelectorOnTop="false"
+               android:paddingRight="15dp"
+               android:paddingLeft="15dp"
+               android:scrollbarStyle="outsideOverlay"/>
+
+     <TextView android:id="@id/android:empty"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:text="@string/emptyListMessage"
+               android:textStyle="bold"
+               android:gravity="center"/>
+     
+       <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/ho_count_view"
+        android:background="@color/gold"
+        android:textColor="@color/black"    />
+</LinearLayout>

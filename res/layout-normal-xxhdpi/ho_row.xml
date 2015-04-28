@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/id"
+    android:descendantFocusability="blocksDescendants" >
+    
+    		<ImageButton 
+    			android:src="@drawable/ic_action_person"
+    			android:id="@+id/picture_button"
+    			android:layout_width="wrap_content"
+    			style="?android:attr/borderlessButtonStyle"
+    			android:layout_height="wrap_content"
+    			android:layout_centerVertical="true"/>
+    	    <TextView 
+    	        android:layout_alignParentTop="true"
+		        android:layout_width = "wrap_content"
+		        android:layout_height = "wrap_content"
+		        android:id="@+id/name" 
+		        android:textStyle="bold"
+		        android:layout_alignStart = "@id/averageRating"
+		        android:textSize="18sp"
+				android:layout_toRightOf = "@id/picture_button"
+		        android:layout_marginLeft="5dp"
+		        android:layout_marginTop="10dp"/>
+      		<RatingBar 
+      		    android:layout_below="@id/name"
+      		    android:layout_alignParentBottom="true"
+	      	    android:layout_width="wrap_content"
+	      	    android:layout_height="wrap_content"
+	      	    android:id="@+id/averageRating"
+	      	    android:isIndicator="true"
+		        android:layout_centerHorizontal="true"     	
+	      	    style="@style/WomenRatingBar"
+	      	    android:numStars="5"
+	      	    android:stepSize="0.5"/>
+      		<TextView 
+      		    android:layout_below="@id/name"
+      		    android:id="@+id/noRatingText" 
+      		    android:layout_width="wrap_content"
+      		    android:layout_height="wrap_content"
+				android:layout_toRightOf = "@id/picture_button"
+      		    android:visibility="gone"
+		        android:layout_alignStart = "@id/name"
+		        android:layout_marginTop="3dp"		        
+		        android:layout_marginBottom="20dp"
+      		    android:text="@string/emptyHoRating"
+      		    />
+      	<!-- 
+      	<ImageButton android:src="@drawable/ic_action_email"
+      		    android:layout_height="wrap_content"
+      		    android:layout_width="wrap_content"
+      		    android:layout_alignParentTop="true"
+      		    android:layout_alignParentRight="true"
+      		    android:focusable="false"
+      		    android:id="@+id/text_button"/>
+      		<ImageButton android:src="@drawable/ic_action_call"
+      		    android:layout_width="wrap_content"
+      		    android:layout_height="wrap_content"
+      		    android:layout_alignParentRight="true"
+      		    android:focusable="false"
+      		    android:id="@+id/call_button"
+      		    android:layout_below="@id/text_button"/>
+      	
+      	
+      	
+      	
+      	 -->	
+    
+    </RelativeLayout>
+    
+

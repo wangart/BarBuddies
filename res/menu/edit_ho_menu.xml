@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="sosis.AndroidApps.HoManager.EditHoActivity" >
+
+   	<item
+        android:id="@+id/action_save_ho"
+        android:title="@string/action_cancel"
+        android:showAsAction="always"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_add_ho"
+        app:showAsAction="always"
+        android:showAsAction="always"
+        android:title="@string/action_save"/>
+
+</menu>

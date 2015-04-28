@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollview" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+    	android:layout_marginRight="10dp" >
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+         
+         <ImageButton 
+             android:src="@drawable/ic_action_secure"
+             android:id="@+id/lock_button"
+             android:layout_width="32dp"
+      		 android:layout_height="32dp"
+      		 android:layout_gravity="left"/>      
+      	<TextView 
+		    android:layout_marginBottom="8dp"
+		    android:layout_marginTop="6dp"
+		    android:textSize="16sp"
+            android:layout_width="0dp"
+	    	android:layout_weight="6"
+            android:layout_height="wrap_content"
+            android:text="@string/ho_info"
+            android:textAllCaps="true"
+            android:id="@+id/info_title"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+      	
+      	 <ImageButton 
+             android:src="@drawable/ic_action_about"
+             android:id="@+id/info_button"
+             android:layout_width="32dp"
+      		 android:layout_height="32dp"
+      		 android:layout_gravity="right"/>  
+         
+         
+     </LinearLayout>
+       <LinearLayout
+     	    android:layout_width="match_parent"
+     	    android:layout_height="wrap_content"
+     	    android:orientation="horizontal">
+     	    
+	       <LinearLayout
+	            android:layout_width="0dp"
+	            android:layout_weight="3"
+	        	android:layout_height="wrap_content"
+	        	android:orientation="vertical">
+          	
+		   	    <EditText
+		       	    android:layout_width="match_parent"
+		       	    android:layout_height="wrap_content"
+		       	    android:hint="@string/first_name"
+		       	    android:inputType="textPersonName"
+		       	    android:imeOptions="flagNoExtractUi"
+		       	    android:id="@+id/firstName"/>
+		   	        
+		   		<EditText 
+		       	    android:layout_width="match_parent"
+		       	    android:layout_height="wrap_content"
+		       	    android:hint="@string/last_name"
+		       	    android:inputType="textPersonName"
+		       	    android:imeOptions="flagNoExtractUi"
+		       	    android:id="@+id/lastName"/>
+		    	
+		   		<EditText 
+		       	    android:layout_width="match_parent"
+		       	    android:layout_height="wrap_content"
+		       	    android:hint="@string/number"
+		       	    android:inputType="phone"
+		       	    android:imeOptions="flagNoExtractUi"
+		       	    android:id="@+id/telephone_number"/>
+		       
+   		</LinearLayout>
+   		
+   		<ImageButton
+	           android:id="@+id/take_a_selfie"
+	           android:layout_width="0dp"
+	           android:layout_weight="1"
+	           android:layout_height="match_parent"
+	           android:src="@drawable/ic_action_camera"
+	           android:layout_marginTop = "30dp"
+	           android:layout_marginBottom = "10dp"
+	           android:layout_marginLeft = "15dp" 
+	           android:scaleType = "fitXY"
+	           />	
+	      
+   	   	
+   		</LinearLayout>
+   		
+   		<LinearLayout
+   		    android:id="@+id/secret_layout"
+   		    android:layout_width="match_parent"
+   		    android:layout_height="wrap_content"
+   		    android:orientation="vertical">
+   		    
+	     
+	      <TextView 
+	         android:layout_height="wrap_content"
+	         android:layout_width="match_parent"
+	         android:layout_marginTop="20dp"
+	         android:textSize="16sp"
+	         android:text="@string/personal_attributes"
+	         android:textStyle="bold"
+	         android:gravity="center_horizontal"
+	         android:textAllCaps="true"
+	         android:id="@+id/ratings_header"/> 
+	       
+   		  		
+  		<RelativeLayout
+   			android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_marginTop="10dp"
+    		android:orientation="horizontal">
+  		    <TextView 
+	         android:layout_height="wrap_content"
+	         android:layout_width="wrap_content"
+	         android:text="@string/face_rating"
+	         android:textStyle="bold"
+  		     android:layout_marginTop="7dp"	    
+   		     android:layout_marginLeft="20dp"
+	         android:layout_alignParentLeft="true"
+	         android:id="@+id/face_label"/>
+	     <RatingBar 
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:numStars="5"
+	         android:layout_alignParentRight="true"
+   		     android:layout_marginRight="20dp"
+	         style="@style/WomenRatingBar"
+	         android:rating="0.0"
+	         android:stepSize="0.5"
+	         android:id="@+id/face_rating_bar"/> 
+  		</RelativeLayout>
+	     
+  		<RelativeLayout
+   			android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal">
+  		    
+  		    <TextView 
+		         android:layout_height="wrap_content"
+		         android:layout_width="wrap_content"
+		         android:text="@string/body_rating"
+  		     	 android:layout_marginTop="7dp"	    
+   		     	 android:layout_marginLeft="20dp"
+	         	 android:layout_alignParentLeft="true"
+		         android:textStyle="bold"
+		         android:id="@+id/body_label"/>
+	    	 <RatingBar 
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:numStars="5"
+	             android:layout_alignParentRight="true"
+   		     	 android:layout_marginRight="20dp"
+	             style="@style/WomenRatingBar"		         
+		         android:rating="0.0"
+		         android:stepSize="0.5"
+		         android:id="@+id/body_rating_bar"/>
+
+  		</RelativeLayout>
+   		
+	    <RelativeLayout
+   			android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal">
+	        <TextView 
+		         android:layout_height="wrap_content"
+		         android:layout_width="wrap_content"
+		         android:text="@string/personality_rating"
+		         android:textStyle="bold"
+  		     	 android:layout_marginTop="7dp"	    
+   		     	 android:layout_marginLeft="20dp"
+	         	 android:layout_alignParentLeft="true"
+	         	 android:id="@+id/personality_label"/>
+	    	 <RatingBar 
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:numStars="5"
+	             style="@style/WomenRatingBar"
+	             android:layout_alignParentRight="true"
+   		     	 android:layout_marginRight="20dp"
+		         android:rating="0.0"
+		         android:stepSize="0.5"
+		         android:id="@+id/personality_rating_bar"/>	   
+ 
+	    </RelativeLayout> 
+	       
+	    
+	    <RelativeLayout
+   			android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal">
+	        
+	        <TextView 
+		         android:layout_height="wrap_content"
+		         android:layout_width="wrap_content"
+		         android:text="@string/humor_rating"
+		         android:textStyle="bold"
+  		     	 android:layout_marginTop="7dp"	    
+   		     	 android:layout_marginLeft="20dp"
+	         	 android:layout_alignParentLeft="true"		             
+		         android:id="@+id/humor_label"/>
+	     	<RatingBar 
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:numStars="5"
+	             style="@style/WomenRatingBar"
+	             android:layout_alignParentRight="true"
+   		     	 android:layout_marginRight="20dp"
+   		         android:rating="0.0"
+		         android:stepSize="0.5"
+		         android:id="@+id/humor_rating_bar"/>	     
+	        
+	        
+	    </RelativeLayout>
+	     
+	    <RelativeLayout
+   			android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal">
+	     
+	        <TextView 
+	        	 android:textColor="@color/gold"
+		         android:layout_height="wrap_content"
+		         android:layout_width="wrap_content"
+		         android:text="@string/bitchy_rating"
+		         android:textStyle="bold"
+  		     	 android:layout_marginTop="7dp"	    
+   		     	 android:layout_marginLeft="20dp"
+	         	 android:layout_alignParentLeft="true"	
+		         android:id="@+id/bitch_label"/>
+	     	<RatingBar 
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:numStars="5"
+	             style="@style/WomenRatingBar"
+	             android:layout_alignParentRight="true"
+   		     	 android:layout_marginRight="20dp"
+		         android:rating="0.0"
+		         android:stepSize="0.5"
+		         android:id="@+id/bitch_rating_bar"/>
+	        
+	    </RelativeLayout>		
+	         
+	    <TextView 
+	         android:layout_height="wrap_content"
+	         android:layout_width="match_parent"
+	         android:layout_marginTop="10dp"
+	         android:textSize="16sp"
+	         android:text="@string/personal_tags"
+	         android:textStyle="bold"
+	         android:gravity="center_horizontal"
+	         android:textAllCaps="true"
+	         android:id="@+id/tags_header"/> 
+	         
+	    <RelativeLayout
+   			android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal"
+    		android:layout_marginTop="15dp"	    
+   		    android:id="@+id/fuckable_layout">   		   
+   		    <TextView 
+   		        android:layout_width="wrap_content"
+   		        android:layout_height="wrap_content"
+   		        android:text="Fuckable?"
+  		     	android:layout_marginTop="7dp"	    
+   		     	android:layout_marginLeft="20dp"
+	         	android:layout_alignParentLeft="true"	
+   		        android:textStyle="bold"/>
+   		    
+   		    <Switch 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textOn="Hell Yea"
+		        android:textOff="Hell Nah"
+	            android:layout_alignParentRight="true"
+				android:textAppearance="@style/switchTextColor"
+   		     	android:layout_marginRight="20dp"
+   		     	android:thumb="@drawable/homanagergold_switch_inner_holo_dark"
+    			android:track="@drawable/homanagergold_switch_track_holo_dark"
+		        android:id="@+id/fuckableSwitch"/>
+   		    </RelativeLayout>
+   		    
+	    	<RelativeLayout
+   				android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+	    		android:layout_marginTop="15dp"	    
+    			android:orientation="horizontal"
+	   		    android:id="@+id/friendable_layout">
+   		   
+   		    <TextView 
+   		        android:layout_width="wrap_content"
+   		        android:layout_height="wrap_content"
+  		     	android:layout_marginTop="7dp"	    
+   		     	android:layout_marginLeft="20dp"
+	         	android:layout_alignParentLeft="true"
+   		        android:text="Friendable?"
+   		        android:textStyle="bold"/>
+   		    
+   		    <Switch 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+   		     	android:layout_marginRight="20dp"
+		        android:textOn="Hell Yea"
+		        android:textOff="Hell Nah"
+				android:textAppearance="@style/switchTextColor"
+		        android:thumb="@drawable/homanagergold_switch_inner_holo_dark"
+    			android:track="@drawable/homanagergold_switch_track_holo_dark"
+		        android:id="@+id/friendableswitch"/>
+   		    </RelativeLayout>
+   		    
+   		    
+	    	<RelativeLayout
+   				android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+	    		android:layout_marginTop="15dp"	    
+    			android:orientation="horizontal"
+	   		    android:id="@+id/dateable_layout">   		   
+   		    <TextView 
+   		        android:layout_width="wrap_content"
+   		        android:layout_height="wrap_content"
+  		     	android:layout_marginTop="7dp"	    
+   		     	android:layout_marginLeft="20dp"
+	         	android:layout_alignParentLeft="true"
+   		        android:text="Dateable?"
+   		        android:textStyle="bold"/>
+   		    
+   		    <Switch 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+   		     	android:layout_marginRight="20dp"
+				android:textAppearance="@style/switchTextColor"
+		        android:textOn="Hell Yea"
+		        android:textOff="Hell Nah"
+		        android:thumb="@drawable/homanagergold_switch_inner_holo_dark"
+    			android:track="@drawable/homanagergold_switch_track_holo_dark"
+		        android:id="@+id/dateableswitch"/>
+   			</RelativeLayout>
+   			
+	    	<RelativeLayout
+   				android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+	    		android:layout_marginTop="10dp"	    
+    			android:orientation="horizontal"
+	   		    android:id="@+id/ethnicity_layout"> 
+   			    
+   			      <TextView 
+   		        android:layout_width="wrap_content"
+   		        android:layout_height="wrap_content"
+  		     	android:layout_marginTop="19dp"	    
+   		     	android:layout_marginLeft="20dp"
+	         	android:layout_alignParentLeft="true"
+   		        android:text="@string/ethnicity"
+   		        android:textStyle="bold"/>
+   		    <Spinner
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+   		     	android:layout_marginRight="20dp"
+	         	android:layout_alignParentRight="true"   		     	
+   		        android:textColor="@color/gold"
+   		        android:id="@+id/ethnicity_view" />
+   			    </RelativeLayout>
+   		      		
+   		  <!--  
+   		    <TextView 
+	         android:layout_height="wrap_content"
+	         android:layout_width="match_parent"
+	         android:layout_marginTop="10dp"
+	         android:layout_marginBottom="8dp"
+	         android:textSize="16sp"
+	         android:text="@string/other_info_header"
+	         android:textStyle="bold"
+	         android:id="@+id/other_info_header"
+	         android:gravity="center_horizontal"
+	         android:textAllCaps="true"/>
+   		    
+   		    <LinearLayout 
+   		    android:layout_marginTop="10dp"
+   		    android:layout_width="match_parent"
+   		    android:layout_height="wrap_content"
+   		    android:orientation="horizontal"
+   		    android:id="@+id/uni_layout">
+   		       		   
+	   		    <TextView 
+	   		        android:layout_width="0dp"
+	   		        android:layout_height="match_parent"
+	   		        android:layout_weight="2"
+	   		        android:text="@string/in_uni"
+	   		        android:textStyle="bold"/>
+	   		    
+	   		    <Switch 
+			        android:layout_width="0dp"
+			        android:layout_weight="1"
+			        android:layout_height="wrap_content"
+			        android:textOn="Yes"
+			        android:textOff="No"
+			        android:id="@+id/inUniSwitch"/>
+   			
+   		</LinearLayout>
+   		
+   		<EditText 
+	        android:layout_width = "match_parent"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/university_input"
+	        android:inputType="text"
+	        android:hint="@string/university"
+       	    android:imeOptions="flagNoExtractUi"
+	        android:visibility="gone"/>   
+	        
+   		 <LinearLayout 
+   		    android:layout_marginTop="5dp"
+   		    android:layout_width="match_parent"
+   		    android:layout_height="wrap_content"
+   		    android:orientation="horizontal"
+   		    android:id="@+id/specific_dets_layout">   		   
+   		    
+   		    <TextView 
+   		        android:layout_width="0dp"
+   		        android:layout_height="wrap_content"
+   		        android:layout_weight="1"
+   		        android:text="@string/age"
+   		        android:textStyle="bold"/>
+   		    
+   		    <EditText 
+   		        android:layout_marginLeft="2dp"
+   		        android:layout_width="0dp"
+   		        android:layout_marginRight="45dp"
+   		        android:layout_height="wrap_content"
+   		        android:layout_weight="2"
+   		        android:inputType="number"
+       	        android:imeOptions="flagNoExtractUi"   
+   		        android:id="@+id/age_view"/>
+   		    
+   		  
+   		    
+   		 </LinearLayout>
+   		 
+   		 
+   			<LinearLayout
+	         android:layout_marginTop="5dp"
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:orientation="horizontal"
+	         android:id="@+id/hometown_layout">
+	         
+	        <TextView 
+   		        android:layout_width="0dp"
+   		        android:layout_height="wrap_content"
+   		        android:layout_weight="1"
+   		        android:text="@string/hometown"
+   		        android:textStyle="bold"/>
+	         
+	        <EditText 
+	         android:layout_width="0dp"
+	         android:layout_height="wrap_content"
+	         android:layout_weight="3"
+	         android:inputType="text"
+	         android:textSize="14sp"
+	         android:imeOptions="flagNoExtractUi"
+	         android:id="@+id/hometown_view"/>
+	         
+	     </LinearLayout>
+	     -->
+   		</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+    
+    
+    
+</FrameLayout>

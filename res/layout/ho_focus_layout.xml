@@ -1,0 +1,235 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+       	     
+    <TextView 
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+   		android:textColor="@color/gold"
+   		android:textStyle="bold"
+   		android:layout_marginLeft = "20dp"
+   		android:layout_marginTop="20dp"
+   		android:textSize="20sp"
+   		android:id="@+id/name_text"/>
+    
+       <ImageButton
+	        android:layout_height="50dp"
+	        android:layout_width="50dp"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentRight="true"
+			android:layout_marginTop="10dp"
+			android:layout_marginRight="10dp"
+	        android:clickable="true"
+	        android:id="@+id/remove_ho_button"
+	        style="?android:attr/borderlessButtonStyle"
+	        android:src="@drawable/ic_action_discard" />
+       
+        <ImageButton
+	        android:layout_height="50dp"
+	        android:layout_width="50dp"
+	        android:layout_marginTop="10dp"
+	        android:layout_alignParentTop="true"
+	        android:layout_toLeftOf="@id/remove_ho_button"
+	        android:id="@+id/edit_ho_button"
+	        android:clickable="true"
+	        style="?android:attr/borderlessButtonStyle"
+	        android:src="@drawable/ic_action_edit" />  
+	     
+       <View style="@style/Divider"
+           android:id="@+id/divider"
+           android:layout_below="@id/remove_ho_button"
+           android:layout_marginLeft="10dp"
+           android:layout_marginTop="7dp"
+           android:layout_marginRight="10dp"/>
+       
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+  		   android:layout_below="@id/divider"
+  		   android:id="@+id/picture_row"
+  		   android:layout_marginLeft="15dp"
+  		   android:layout_marginRight="15dp"
+  		   android:layout_marginTop="10dp">
+       
+	      <ImageButton
+	  			android:src="@drawable/dp"
+	  			android:id="@+id/ho_focus_picture"
+	  			android:layout_marginLeft="5dp"
+	  			style="?android:attr/borderlessButtonStyle"
+	  			android:layout_width="wrap_content"
+	  			android:layout_height="wrap_content"/>
+	      
+	      <LinearLayout 
+	          android:layout_width="wrap_content"
+	          android:layout_height="match_parent"
+	          android:orientation="vertical"
+	          android:layout_marginLeft="15dp">
+	          
+	          
+	          <TextView 
+		         android:layout_height="wrap_content"
+		         android:layout_width="match_parent"
+		         android:textStyle="bold"
+				 android:textSize="20sp"
+				 android:layout_marginTop="10dp"
+		         android:id="@+id/ethnicity_focus"/>
+	       
+	       	  <TextView 
+	       	    android:layout_height="wrap_content"
+		        android:layout_width="match_parent"
+		        android:layout_marginTop="10dp"
+		        android:textStyle="bold"
+		        android:layout_below="@id/ethnicity_focus"
+		        android:id="@+id/tagView"/>
+	          
+	          
+	      </LinearLayout>
+           
+       </LinearLayout>
+
+       	<LinearLayout
+  		    android:layout_width="match_parent"
+  		    android:layout_height="wrap_content"
+  		    android:layout_below="@id/picture_row"
+  		    android:layout_marginLeft="20dp"
+  		    android:id="@+id/face_row"
+  		    android:orientation="horizontal">
+   		<TextView 
+	         android:layout_height="wrap_content"
+	         android:layout_width="wrap_content"
+	         android:layout_marginTop="10dp"
+	         android:text="@string/face_rating"
+	         android:textStyle="bold"/>
+   		
+	    <RatingBar 
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:numStars="5"
+			 android:layout_gravity="center"
+			 android:isIndicator="true"
+	         android:rating="0.0"
+	         style="@style/WomenRatingBar"
+	         android:layout_marginLeft="80dp"
+	         android:stepSize="0.5"
+	         android:id="@+id/face_rating_focus"/> 
+
+	    </LinearLayout>
+	    
+       	
+       	<LinearLayout
+  		    android:layout_width="match_parent"
+  		    android:layout_height="wrap_content"
+  		    android:layout_marginLeft="20dp"
+  		    android:id="@+id/body_row"
+  		    android:layout_below="@id/face_row"
+  		    android:orientation="horizontal">
+  		    
+  		    <TextView 
+		         android:layout_height="wrap_content"
+		         android:layout_width="wrap_content"
+		         android:layout_marginTop="10dp"
+		         android:text="@string/body_rating"
+		         android:textStyle="bold"/>
+	    	 <RatingBar 
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:numStars="5"
+		         android:isIndicator="true"
+		         style="@style/WomenRatingBar"
+		         android:layout_gravity="center"
+		         android:layout_marginLeft="78dp"
+		         android:rating="0.0"
+		         android:stepSize="0.5"
+		         android:id="@+id/body_rating_indicator"/>
+
+  		</LinearLayout>
+  		
+       	
+       	 <LinearLayout
+  		    android:layout_width="match_parent"
+  		    android:layout_height="wrap_content"
+  		    android:id="@+id/personality_row"
+  		    android:layout_below="@id/body_row"
+  		    android:layout_marginLeft="20dp"
+  		    android:orientation="horizontal">
+	        <TextView 
+		         android:layout_height="wrap_content"
+		         android:layout_width="wrap_content"
+		         android:text="@string/personality_rating"
+		         android:textStyle="bold"
+		         android:layout_marginTop="10dp"/>
+	    	<RatingBar 
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:numStars="5"
+		         android:isIndicator="true"
+		         android:layout_marginLeft="39dp"
+		         android:layout_gravity="center"
+				 style="@style/WomenRatingBar"
+		         android:rating="0.0"
+		         android:stepSize="0.5"
+		         android:id="@+id/personality_rating_indicator"/>	   
+ 
+	    </LinearLayout> 
+	    
+       	<LinearLayout
+  		    android:layout_width="match_parent"
+  		    android:layout_height="wrap_content"
+  		    android:layout_marginLeft="20dp"
+  		    android:id="@+id/humor_row"
+  		    android:layout_below="@id/personality_row"
+  		    android:orientation="horizontal">
+	        
+	        <TextView 
+		         android:layout_height="wrap_content"
+		         android:layout_width="wrap_content"
+		         android:text="@string/humor_rating"
+		         android:textStyle="bold"
+		         android:layout_marginTop="10dp"/>
+	     	<RatingBar 
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:layout_marginLeft="67dp"
+		         android:numStars="5"
+		         android:isIndicator="true"
+		         android:layout_gravity="center"
+		         android:rating="0.0"
+		         android:stepSize="0.5"
+			     style="@style/WomenRatingBar"
+		         android:id="@+id/humor_rating_indicator"/>	
+		    
+	     	</LinearLayout>
+	     	
+       	 <LinearLayout
+  		    android:layout_width="match_parent"
+  		    android:layout_height="wrap_content"
+  		    android:layout_marginLeft="20dp"
+  		    android:id="@+id/bitch_row"
+  		    android:layout_marginBottom="10dp"
+  		    android:layout_below="@id/humor_row"
+  		    android:orientation="horizontal">
+	     
+	        <TextView 
+		         android:layout_height="wrap_content"
+		         android:layout_width="wrap_content"
+		         android:text="@string/bitchy_rating"
+		         android:textStyle="bold"
+		         android:layout_marginTop="10dp"/>
+	     	<RatingBar 
+		         android:layout_width="wrap_content"
+		         android:layout_height="wrap_content"
+		         android:numStars="5"
+		         android:isIndicator="true"
+		         android:rating="0.0"
+		         android:layout_marginLeft="44dp"
+				 style="@style/WomenRatingBar"
+		         android:stepSize="0.5"
+		         android:id="@+id/bitch_rating_indicator"/>
+	        
+	    </LinearLayout>	
+
+   	   
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <string name="app_name">BarBuddies</string>
+    <string name="action_add_ho">Add</string>
+    <string name="emptyListMessage">YOU AINT GOT NO HOES MY BROTHA</string>
+	<string name="title_hoForm_activity"></string>
+	<string name="first_name">First Name</string>
+	<string name="last_name">Last Name</string>
+	<string name="action_save">Save</string>
+	<string name="ho_info">Personal Information</string>
+	<string name="number">Number</string>
+	<string name="ethnicity">Ethnicity</string>
+	<string name="personal_attributes">Personal Attribute Ratings"</string>
+	<string name="face_rating">Face</string>
+	<string name="body_rating">Body</string>
+	<string name="personality_rating">Personality</string>
+	<string name="humor_rating">Humor</string>
+	<string name="bitchy_rating">Bitchiness</string>
+	<string name="first_intention">Intentions</string>
+	<string name="intention_preference_key">Intentions</string>
+	<string name="ethnicity_preference_key">Ethnicity</string>
+	<string name="ethnicity_dialog_title">Ho Ethnicity</string>
+	<string name="personality">Personality</string>
+	<string name="appearance">Appearance</string>
+	<string name="other_info_header">Detailed Information</string>
+	<string name="emptyHoRating">Not enough info for Ho rating.</string>
+	<string name = "action_cancel">Cancel</string>
+	<string name="personal_tags">Personal Attribute Tags</string>
+	<string-array name="ethnicity_spinner_choices">
+	   <item>Unknown</item>
+	   <item>White</item>	
+	   <item>Black</item>   
+	   <item>Asian</item> 
+	   <item>Brown</item>
+	   <item>Middle Eastern</item>
+	   <item>European</item>	
+	   <item>Latina</item>    
+	</string-array>
+
+</resources>
